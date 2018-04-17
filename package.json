@@ -1,0 +1,25 @@
+{
+  "name": "learn-grapql-hackernews-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node -- ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "bcrypt": "^2.0.0",
+    "graphql-yoga": "^1.8.5",
+    "jsonwebtoken": "^8.2.1",
+    "prisma-binding": "^1.5.17"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
