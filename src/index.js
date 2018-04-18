@@ -2,6 +2,7 @@ import { GraphQLServer } from 'graphql-yoga'
 import { Prisma } from 'prisma-binding'
 import Subscription from './resolvers/Subscription'
 import Query from './resolvers/Query'
+import Feed from './resolvers/Feed'
 import Mutation from './resolvers/Mutation'
 import AuthPayload from './resolvers/AuthPayload'
 
@@ -9,7 +10,8 @@ const resolvers = {
   Query,
   Mutation,
   AuthPayload,
-  Subscription
+  Subscription,
+  Feed
 }
 
 const server = new GraphQLServer({
@@ -23,7 +25,7 @@ const server = new GraphQLServer({
       secret: 'mysecret123',
       debug: true,
     }),
-  }),
+  })
 })
 
 server.start(() => console.log(`Server is running on http://localhost:4000`))

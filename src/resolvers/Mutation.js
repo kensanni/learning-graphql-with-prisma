@@ -57,7 +57,6 @@ class Mutation {
   }
   static async vote(parent, args, context, info) {
     const userId = getUserId(context)
-    console.log("@@@@@@@@@@@@@@@@@@@@@@@", userId)
     const linkExists = await context.db.exists.Vote({
       user: { id: userId },
       link: { id: args.linkId }
